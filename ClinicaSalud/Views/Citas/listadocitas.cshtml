@@ -1,0 +1,106 @@
+﻿@model IEnumerable<ClinicaSalud.Models.Cita>
+@{
+    ViewData["Title"] = "listadocitas";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<nav aria-label="breadcrumb" class="mb-2">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item active" aria-current="page"></li>
+    </ol>
+</nav>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold mb-0">Citas</h2>
+    <a asp-controller="Citas" asp-action="Nuevo" class="btn btn-primary px-3">
+        <i class="bi bi-plus-lg me-1"></i> Nueva cita
+    </a>
+</div>
+
+@if (TempData["mensaje"] != null)
+{
+    <div class="alert alert-info">@TempData["mensaje"]</div>
+}
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+
+        <div class="d-flex justify-content-between align-items-center mb-3 gap-2 flex-wrap">
+            <form asp-controller="Citas" asp-action="listadocitas" method="get" class="input-group" style="max-width: 380px;">
+                <input type="text" name="texto" value="@ViewBag.texto" class="form-control" placeholder="Buscar por paciente o médico..." />
+                <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i> Buscar</button>
+            </form>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table align-middle table-hover">
+                <thead>
+                    <tr class="text-muted small text-uppercase">
+                        <th>@Html.DisplayNameFor(model => model.CitaId)</th>
+                        <th>@Html.DisplayNameFor(model => model.NombrePaciente)</th>
+                        <th>@Html.DisplayNameFor(model => model.NombreMedico)</th>
+                        <th>@Html.DisplayNameFor(model => model.Fecha)</th>
+                        <th>@Html.DisplayNameFor(model => model.Hora)</th>
+                        <th>@Html.DisplayNameFor(model => model.Motivo)</th>
+                        <th>@Html.DisplayNameFor(model => model.Estado)</th>
+                        <th class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="text-muted">@Html.DisplayFor(modelItem => item.CitaId)</td>
+                            <td class="fw-semibold">@Html.DisplayFor(modelItem => item.NombrePaciente)</td>
+                            <td>@Html.DisplayFor(modelItem => item.NombreMedico)</td>
+                            <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
+                            <td>@item.Hora.ToString(@"hh\:mm")</td>
+                            <td>@Html.DisplayFor(modelItem => item.Motivo)</td>
+                            <td>
+                                @{
+                                    string badgeClass = item.Estado switch
+                                    {
+                                        "Atendida" => "bg-success text-white",
+                                        "Cancelada" => "bg-danger text-white",
+                                        _ => "bg-warning text-dark"
+                                    };
+                                }
+                                <span class="badge rounded-pill @badgeClass">@item.Estado</span>
+                            </td>
+                            <td class="text-end">
+                                <a asp-controller="Citas" asp-action="Edit" asp-route-id="@item.CitaId"
+                                   class="btn btn-sm btn-outline-primary" title="Editar">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a asp-controller="Citas" asp-action="Delete" asp-route-id="@item.CitaId"
+                                   class="btn btn-sm btn-outline-danger" title="Eliminar"
+                                   onclick="return confirm('¿Eliminar esta cita?');">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (Model.Any())
+        {
+            <nav aria-label="Paginación de citas">
+                <ul class="pagination justify-content-center mb-0">
+                    @for (int i = 0; i < (int)ViewBag.paginas; i++)
+                    {
+                        <li class="page-item @(i == (int)ViewBag.pageNumber ? "active" : "")">
+                            <a class="page-link" asp-action="ListadoCitas" asp-route-pageNumber="@i" asp-route-texto="@ViewBag.texto">@(i + 1)</a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+        else
+        {
+            <p class="text-muted text-center mb-0">No hay citas registradas todavía.</p>
+        }
+
+    </div>
+</div>

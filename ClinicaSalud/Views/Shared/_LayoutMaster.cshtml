@@ -1,0 +1,102 @@
+﻿@{
+    string controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
+    string ActiveClass(string name) => controller.Equals(name, StringComparison.OrdinalIgnoreCase) ? "active" : "";
+}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - ClinicaSalud</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+    <link rel="stylesheet" href="~/css/layout-master.css" asp-append-version="true" />
+    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
+    @await RenderSectionAsync("Styles", required: false)
+</head>
+<body>
+    <div class="app-shell">
+
+        <!-- Sidebar -->
+        <aside class="sidebar" id="sidebar">
+            <div class="sidebar-brand">
+                <span class="brand-icon"><i class="bi bi-suit-heart-fill"></i></span>
+                <span class="brand-text">Clínica <strong>Salud+</strong></span>
+            </div>
+
+            <nav class="sidebar-nav">
+                <ul>
+                    <li><a class="nav-link @ActiveClass("Dashboard")" asp-controller="Dashboard" asp-action="Index"><i class="bi bi-speedometer2"></i><span>Dashboard</span></a></li>
+                    <li><a class="nav-link @ActiveClass("Pacientes")" asp-controller="Pacientes" asp-action="listadopacientes"><i class="bi bi-people"></i><span>Pacientes</span></a></li>
+                    <li><a class="nav-link @ActiveClass("Medicos")" asp-controller="Medicos" asp-action="listadomedicos"><i class="bi bi-person-badge"></i><span>Médicos</span></a></li>
+                    <li><a class="nav-link @ActiveClass("Especialidades")" asp-controller="Especialidades" asp-action="listadoespecialidades"><i class="bi bi-tags"></i><span>Especialidades</span></a></li>
+                    <li><a class="nav-link @ActiveClass("Citas")" asp-controller="Citas" asp-action="listadocitas"><i class="bi bi-calendar-check"></i><span>Citas</span></a></li>
+                    
+                    <li><a class="nav-link @ActiveClass("Reportes")" asp-controller="Reportes" asp-action="Index"><i class="bi bi-bar-chart"></i><span>Reportes</span></a></li>
+                    <li><a class="nav-link @ActiveClass("Usuarios")" asp-controller="Usuarios" asp-action="Index"><i class="bi bi-person-lines-fill"></i><span>Usuarios</span></a></li>
+                    <li><a class="nav-link @ActiveClass("Configuracion")" asp-controller="Configuracion" asp-action="Index"><i class="bi bi-gear"></i><span>Configuración</span></a></li>
+                </ul>
+            </nav>
+
+            <div class="sidebar-footer">
+                <a class="nav-link logout" asp-controller="Account" asp-action="Logout">
+                    <i class="bi bi-box-arrow-left"></i><span>Cerrar sesión</span>
+                </a>
+            </div>
+        </aside>
+
+        <!-- overlay para mobile -->
+        <div class="sidebar-overlay" id="sidebarOverlay"></div>
+
+        <div class="main-wrapper">
+
+            <!-- Topbar -->
+            <header class="topbar">
+                <button class="icon-btn sidebar-toggle" id="sidebarToggle" type="button" aria-label="Abrir menú">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <h1 class="page-title">Clinica Salud</h1>
+
+                <div class="topbar-actions">
+                    <button class="icon-btn" type="button" aria-label="Notificaciones">
+                        <i class="bi bi-bell"></i>
+                    </button>
+
+                    <div class="dropdown user-menu">
+                        <button class="user-menu-btn" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            <span class="avatar">A</span>
+                            <span class="user-info">
+                                <span class="user-name">Admin</span>
+                                <span class="user-role">Administrador</span>
+                            </span>
+                            <i class="bi bi-chevron-down"></i>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-end">
+                            <li><a class="dropdown-item" asp-controller="Account" asp-action="Perfil"><i class="bi bi-person me-2"></i>Mi perfil</a></li>
+                            <li><a class="dropdown-item" asp-controller="Configuracion" asp-action="Index"><i class="bi bi-gear me-2"></i>Configuración</a></li>
+                            <li><hr class="dropdown-divider" /></li>
+                            <li><a class="dropdown-item text-danger" asp-controller="Account" asp-action="Logout"><i class="bi bi-box-arrow-left me-2"></i>Cerrar sesión</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </header>
+
+            <!-- Contenido de cada vista -->
+            <main class="content">
+                @RenderBody()
+            </main>
+
+            <footer class="app-footer">
+                &copy; @DateTime.Now.Year - Clínica Salud+
+            </footer>
+        </div>
+    </div>
+
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="~/js/layout-master.js" asp-append-version="true"></script>
+    <script src="~/js/site.js" asp-append-version="true"></script>
+    @await RenderSectionAsync("Scripts", required: false)
+</body>
+</html>

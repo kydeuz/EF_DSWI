@@ -1,0 +1,97 @@
+﻿@model ClinicaSalud.Models.Paciente
+
+@{
+    ViewData["Title"] = "Editar paciente";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<nav aria-label="breadcrumb" class="mb-2">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Pacientes" asp-action="Listadopacientes">Pacientes</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Editar paciente</li>
+    </ol>
+</nav>
+
+<h2 class="fw-bold mb-4">Editar paciente</h2>
+
+@if (TempData["mensaje"] != null)
+{
+    <div class="alert alert-info">@TempData["mensaje"]</div>
+}
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+
+        <form asp-controller="Pacientes" asp-action="Edit" method="post">
+
+            <input type="hidden" asp-for="PacienteId" />
+
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label asp-for="DNI" class="form-label">DNI *</label>
+                    <input asp-for="DNI" class="form-control" required maxlength="15" />
+                    <span asp-validation-for="DNI" class="text-danger small"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Nombres" class="form-label">Nombres *</label>
+                    <input asp-for="Nombres" class="form-control" required maxlength="100" />
+                    <span asp-validation-for="Nombres" class="text-danger small"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Apellidos" class="form-label">Apellidos *</label>
+                    <input asp-for="Apellidos" class="form-control" required maxlength="100" />
+                    <span asp-validation-for="Apellidos" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+                <div class="col-md-4">
+                    <label asp-for="FechaNacimiento" class="form-label">Fecha de nacimiento *</label>
+                    <input asp-for="FechaNacimiento" type="date" class="form-control"
+                           value="@Model.FechaNacimiento.ToString("yyyy-MM-dd")" required />
+                    <span asp-validation-for="FechaNacimiento" class="text-danger small"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Sexo" class="form-label">Sexo *</label>
+                    <select asp-for="Sexo" class="form-select" required>
+                        <option value="">Seleccione</option>
+                        <option value="M">Masculino</option>
+                        <option value="F">Femenino</option>
+                    </select>
+                    <span asp-validation-for="Sexo" class="text-danger small"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Telefono" class="form-label">Teléfono *</label>
+                    <input asp-for="Telefono" class="form-control" required maxlength="20" />
+                    <span asp-validation-for="Telefono" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+                <div class="col-md-6">
+                    <label asp-for="Correo" class="form-label">Correo</label>
+                    <input asp-for="Correo" type="email" class="form-control" maxlength="100" />
+                    <span asp-validation-for="Correo" class="text-danger small"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Direccion" class="form-label">Dirección</label>
+                    <input asp-for="Direccion" class="form-control" maxlength="200" />
+                    <span asp-validation-for="Direccion" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+                <a asp-controller="Pacientes" asp-action="Listado" class="btn btn-outline-secondary px-4">Cancelar</a>
+                <button type="submit" class="btn btn-primary px-4">Guardar</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

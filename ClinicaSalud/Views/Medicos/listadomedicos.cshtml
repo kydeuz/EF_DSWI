@@ -1,0 +1,105 @@
+﻿@model IEnumerable<ClinicaSalud.Models.Medico>
+@{
+    ViewData["Title"] = "listadomedicos";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<nav aria-label="breadcrumb" class="mb-2">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item active" aria-current="page"></li>
+    </ol>
+</nav>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold mb-0">Médicos</h2>
+    <a asp-controller="Medicos" asp-action="Nuevo" class="btn btn-primary px-3">
+        <i class="bi bi-plus-lg me-1"></i> Nuevo médico
+    </a>
+</div>
+
+@if (TempData["mensaje"] != null)
+{
+    <div class="alert alert-info">@TempData["mensaje"]</div>
+}
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+
+        <div class="d-flex justify-content-between align-items-center mb-3 gap-2 flex-wrap">
+            <form asp-controller="Medicos" asp-action="listadomedicos" method="get" class="input-group" style="max-width: 380px;">
+                <input type="text" name="texto" value="@ViewBag.texto" class="form-control" placeholder="Buscar por nombre, teléfono o especialidad..." />
+                <button class="btn btn-primary" type="submit"><i class="bi bi-search"></i> Buscar</button>
+            </form>
+        </div>
+
+        <div class="table-responsive">
+            <table class="table align-middle table-hover">
+                <thead>
+                    <tr class="text-muted small text-uppercase">
+                        <th>@Html.DisplayNameFor(model => model.MedicoId)</th>
+                        <th>Nombre</th>
+                        <th>@Html.DisplayNameFor(model => model.NombreEspecialidad)</th>
+                        <th>@Html.DisplayNameFor(model => model.Telefono)</th>
+                        <th>@Html.DisplayNameFor(model => model.Correo)</th>
+                        <th>@Html.DisplayNameFor(model => model.Estado)</th>
+                        <th class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td class="text-muted">@Html.DisplayFor(modelItem => item.MedicoId)</td>
+                            <td class="fw-semibold">@item.Nombres @item.Apellidos</td>
+                            <td>
+                                <span class="badge rounded-pill bg-light text-dark border">@item.NombreEspecialidad</span>
+                            </td>
+                            <td>@Html.DisplayFor(modelItem => item.Telefono)</td>
+                            <td>@Html.DisplayFor(modelItem => item.Correo)</td>
+                            <td>
+                                @if (item.Estado)
+                                {
+                                    <span class="badge rounded-pill bg-success text-white">Activo</span>
+                                }
+                                else
+                                {
+                                    <span class="badge rounded-pill bg-secondary text-white">Inactivo</span>
+                                }
+                            </td>
+                            <td class="text-end">
+                                <a asp-controller="Medicos" asp-action="Edit" asp-route-id="@item.MedicoId"
+                                   class="btn btn-sm btn-outline-primary" title="Editar">
+                                    <i class="bi bi-pencil"></i>
+                                </a>
+                                <a asp-controller="Medicos" asp-action="Delete" asp-route-id="@item.MedicoId"
+                                   class="btn btn-sm btn-outline-danger" title="Eliminar"
+                                   onclick="return confirm('¿Eliminar este médico?');">
+                                    <i class="bi bi-trash"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (Model.Any())
+        {
+            <nav aria-label="Paginación de médicos">
+                <ul class="pagination justify-content-center mb-0">
+                    @for (int i = 0; i < (int)ViewBag.paginas; i++)
+                    {
+                        <li class="page-item">
+                            @Html.ActionLink((i + 1).ToString(), "listadomedicos", "Medicos", new { p = i, texto = ViewBag.texto }, new { @class = "page-link" })
+                        </li>
+                    }
+                </ul>
+            </nav>
+        }
+        else
+        {
+            <p class="text-muted text-center mb-0">No hay médicos registrados todavía.</p>
+        }
+
+    </div>
+</div>

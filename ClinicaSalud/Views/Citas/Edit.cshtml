@@ -1,0 +1,94 @@
+﻿@model ClinicaSalud.Models.Cita
+
+@{
+    ViewData["Title"] = "Editar cita";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<nav aria-label="breadcrumb" class="mb-2">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Citas" asp-action="listadocitas">Citas</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Editar cita</li>
+    </ol>
+</nav>
+
+<h2 class="fw-bold mb-4">Editar cita</h2>
+
+@if (TempData["mensaje"] != null)
+{
+    <div class="alert alert-info">@TempData["mensaje"]</div>
+}
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+
+        <form asp-controller="Citas" asp-action="Edit" method="post">
+
+            <input type="hidden" asp-for="CitaId" />
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="PacienteId" class="form-label">Paciente *</label>
+                    <select asp-for="PacienteId" class="form-select" required
+                            asp-items="@(new SelectList(ViewBag.Pacientes, "PacienteId", "Nombres"))">
+                        <option value="">Seleccione paciente</option>
+                    </select>
+                    <span asp-validation-for="PacienteId" class="text-danger small"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="MedicoId" class="form-label">Médico *</label>
+                    <select asp-for="MedicoId" class="form-select" required
+                            asp-items="@(new SelectList(ViewBag.Medicos, "MedicoId", "Nombres"))">
+                        <option value="">Seleccione médico</option>
+                    </select>
+                    <span asp-validation-for="MedicoId" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+                <div class="col-md-4">
+                    <label asp-for="Fecha" class="form-label">Fecha *</label>
+                    <input asp-for="Fecha" type="date" class="form-control"
+                           value="@Model.Fecha.ToString("yyyy-MM-dd")" required />
+                    <span asp-validation-for="Fecha" class="text-danger small"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Hora" class="form-label">Hora *</label>
+                    <input asp-for="Hora" type="time" class="form-control"
+                           value="@Model.Hora.ToString(@"hh\:mm")" required />
+                    <span asp-validation-for="Hora" class="text-danger small"></span>
+                </div>
+                <div class="col-md-4">
+                    <label asp-for="Estado" class="form-label">Estado *</label>
+                    <select asp-for="Estado" class="form-select" required>
+                        <option value="Pendiente">Pendiente</option>
+                        <option value="Atendida">Atendida</option>
+                        <option value="Cancelada">Cancelada</option>
+                    </select>
+                    <span asp-validation-for="Estado" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+                <div class="col-12">
+                    <label asp-for="Motivo" class="form-label">Motivo *</label>
+                    <textarea asp-for="Motivo" class="form-control" rows="3" required></textarea>
+                    <span asp-validation-for="Motivo" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+                <a asp-controller="Citas" asp-action="listadocitas" class="btn btn-outline-secondary px-4">Cancelar</a>
+                <button type="submit" class="btn btn-primary px-4">Guardar</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

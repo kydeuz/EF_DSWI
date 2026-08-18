@@ -1,0 +1,83 @@
+﻿@model IEnumerable<ClinicaSalud.Models.HistorialMedico>
+@{
+    ViewData["Title"] = "Historial médico";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    var paciente = (ClinicaSalud.Models.Paciente)ViewBag.Paciente;
+    int edad = DateTime.Now.Year - paciente.FechaNacimiento.Year;
+    if (DateTime.Now.DayOfYear < paciente.FechaNacimiento.DayOfYear) edad--;
+}
+
+<nav aria-label="breadcrumb" class="mb-2">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Pacientes" asp-action="listadopacientes"></a></li>
+        <li class="breadcrumb-item active" aria-current="page">Detalle</li>
+    </ol>
+</nav>
+
+<div class="d-flex justify-content-between align-items-center mb-4">
+    <h2 class="fw-bold mb-0">Historial médico</h2>
+    <a asp-controller="HistorialMedico" asp-action="Nuevo" asp-route-pacienteId="@paciente.PacienteId" class="btn btn-primary px-3">
+        <i class="bi bi-plus-lg me-1"></i> Nuevo registro
+    </a>
+</div>
+
+@if (TempData["mensaje"] != null)
+{
+    <div class="alert alert-info">@TempData["mensaje"]</div>
+}   
+
+<div class="card border-0 shadow-sm mb-3">
+    <div class="card-body p-4 d-flex align-items-center gap-3">
+        <span class="avatar" style="width:48px;height:48px;font-size:1.1rem;">
+            @paciente.Nombres.Substring(0, 1)@paciente.Apellidos.Substring(0, 1)
+        </span>
+        <div>
+            <h5 class="fw-bold mb-1">@paciente.Nombres @paciente.Apellidos</h5>
+            <span class="text-muted small">
+                DNI: @paciente.DNI &nbsp;|&nbsp; Edad: @edad años &nbsp;|&nbsp; Teléfono: @paciente.Telefono
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+
+        <div class="table-responsive">
+            <table class="table align-middle table-hover">
+                <thead>
+                    <tr class="text-muted small text-uppercase">
+                        <th>Fecha</th>
+                        <th>Médico</th>
+                        <th>Diagnóstico</th>
+                        <th>Tratamiento</th>
+                        <th class="text-end">Acciones</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
+                            <td class="fw-semibold">@item.NombreMedico</td>
+                            <td>@item.Diagnostico</td>
+                            <td>@item.Tratamiento</td>
+                            <td class="text-end">
+                                <a asp-controller="HistorialMedico" asp-action="Detalle" asp-route-id="@item.HistorialId"
+                                   class="btn btn-sm btn-outline-primary" title="Ver detalle">
+                                    <i class="bi bi-eye"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        @if (!Model.Any())
+        {
+            <p class="text-muted text-center mb-0">Este paciente todavía no tiene registros en su historial.</p>
+        }
+
+    </div>
+</div>
