@@ -172,3 +172,71 @@ END
     }
 </ul>
 ```
+
+# **Mejoras implementadas version 3**
+
+### ✅ **Módulo Reportes (nuevo)**
+
+- **SPs:** `sp_ReporteCitas_PorFecha` y `sp_ContarReporteCitas_PorFecha`
+    
+- **Modelo:** `ReporteCita.cs`
+    
+- **Interfaz:** `IReporteRepository`
+    
+- **Repositorio:** `ReporteRepository`
+    
+- **Controlador:** `ReportesController` con validación de fechas incoherentes
+    
+- **Vista:** `Views/Reportes/Index.cshtml` con filtros, tabla y paginación
+    
+
+---
+
+### 2. 🗄️ **BASE DE DATOS (Nuevos SPs)**
+
+|SP|Función|
+|---|---|
+|`sp_ReporteCitas_PorFecha`|Lista citas en un rango de fechas con paginación (`OFFSET FETCH`).|
+|`sp_ContarReporteCitas_PorFecha`|Cuenta el total de citas en el rango para la paginación.|
+
+**Mejora:** Ambos SPs usan `OFFSET FETCH` (paginación eficiente en el servidor).
+
+---
+
+### 3. 📁 **NUEVOS ARCHIVOS CREADOS**
+
+| Archivo                 | Ubicación         | Propósito                                          |
+| ----------------------- | ----------------- | -------------------------------------------------- |
+| `ReporteCita.cs`        | `Models/`         | Modelo DTO para mostrar datos en el reporte.       |
+| `IReporteRepository.cs` | `Repository/`     | Interfaz con los métodos del repositorio.          |
+| `ReporteRepository.cs`  | `Repository/`     | Implementación de acceso a datos.                  |
+| `ReportesController.cs` | `Controllers/`    | Controlador con validación de fechas incoherentes. |
+| `Index.cshtml`          | `Views/Reportes/` | Vista con filtros, tabla y paginación.             |
+
+---
+
+### 4. ✅ **VALIDACIONES IMPLEMENTADAS**
+
+| Módulo        | Validación                                              | Tipo     | ¿Dónde?                              |
+| ------------- | ------------------------------------------------------- | -------- | ------------------------------------ |
+| **Pacientes** | Fecha de nacimiento futura                              | Servidor | Controlador                          |
+| **Citas**     | Fecha de cita pasada                                    | Servidor | Controlador                          |
+| **Citas**     | Conflicto de horario (mismo médico, misma fecha y hora) | Servidor | SP `sp_InsertarCita` con `RAISERROR` |
+| **Reportes**  | Fecha Desde > Fecha Hasta                               | Servidor | Controlador (con `TempData`)         |
+
+**Mensajes al usuario:** Uso de `TempData["mensaje"]` para éxito y `TempData["error"]` para errores.
+
+---
+
+### 5. 🔧 **MEJORAS EN CONTROLADORES EXISTENTES**
+
+| Controlador           | Mejora                                                                          |
+| --------------------- | ------------------------------------------------------------------------------- |
+| `PacientesController` | Validación de fecha futura + `ModelState.IsValid` + `return View("Nuevo", obj)` |
+| `CitasController`     | Validación de fecha pasada + `ViewBag` recargado cuando hay error               |
+| `ReportesController`  | Validación de fechas incoherentes + mensaje en `TempData`                       |
+
+---
+
+
+
