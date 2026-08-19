@@ -1,0 +1,127 @@
+@model IEnumerable<ClinicaSalud.Models.ReporteCita>
+
+@{
+    ViewData["Title"] = "Reporte de Citas";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+@if (TempData["error"] != null)
+{
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <i class="bi bi-exclamation-triangle-fill me-1"></i>
+        @TempData["error"]
+        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+    </div>
+}
+
+<nav aria-label="breadcrumb" class="mb-2">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item active" aria-current="page">Reportes</li>
+    </ol>
+</nav>
+
+<h2 class="fw-bold mb-4">Reporte de Citas por Fecha</h2>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+
+        <!-- FORMULARIO DE FILTROS -->
+        <form asp-controller="Reportes" asp-action="Index" method="post" class="row g-3 mb-4">
+            <div class="col-md-4">
+                <label class="form-label">Fecha Desde</label>
+                <input type="date" name="fechaDesde" value="@ViewBag.fechaDesde" class="form-control" required />
+            </div>
+            <div class="col-md-4">
+                <label class="form-label">Fecha Hasta</label>
+                <input type="date" name="fechaHasta" value="@ViewBag.fechaHasta" class="form-control" required />
+            </div>
+            <div class="col-md-4 d-flex align-items-end">
+                <button type="submit" class="btn btn-primary w-100">
+                    <i class="bi bi-search me-1"></i> Generar Reporte
+                </button>
+            </div>
+        </form>
+
+        <!-- RESULTADOS -->
+        <div class="table-responsive">
+            <table class="table align-middle table-hover">
+                <thead>
+                    <tr class="text-muted small text-uppercase">
+                        <th>#</th>
+                        <th>Fecha</th>
+                        <th>Hora</th>
+                        <th>Paciente</th>
+                        <th>Médico</th>
+                        <th>Especialidad</th>
+                        <th>Motivo</th>
+                        <th>Estado</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @if (Model.Any())
+                    {
+                        int contador = 1;
+                        foreach (var item in Model)
+                        {
+                            <tr>
+                                <td>@contador</td>
+                                <td>@item.Fecha.ToString("dd/MM/yyyy")</td>
+                                <td>@item.Hora.ToString(@"hh\:mm")</td>
+                                <td class="fw-semibold">@item.Paciente</td>
+                                <td>@item.Medico</td>
+                                <td><span class="badge bg-light text-dark border">@item.Especialidad</span></td>
+                                <td>@item.Motivo</td>
+                                <td>
+                                    @{
+                                        string badgeClass = item.Estado switch
+                                        {
+                                            "Atendida" => "bg-success text-white",
+                                            "Cancelada" => "bg-danger text-white",
+                                            _ => "bg-warning text-dark"
+                                        };
+                                    }
+                                    <span class="badge rounded-pill @badgeClass">@item.Estado</span>
+                                </td>
+                            </tr>
+                            contador++;
+                        }
+                    }
+                    else
+                    {
+                        <tr>
+                            <td colspan="8" class="text-center text-muted py-3">
+                                No hay citas en el rango de fechas seleccionado.
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+
+        <!-- PAGINACIÓN -->
+        @if (Model.Any())
+        {
+            <nav aria-label="Paginación del reporte">
+                <ul class="pagination justify-content-center mb-0">
+                    @for (int i = 1; i <= (int)ViewBag.paginas; i++)
+                    {
+                        <li class="page-item @(i == ViewBag.pageNumber ? "active" : "")">
+                            <a class="page-link" 
+                               asp-controller="Reportes" 
+                               asp-action="Index" 
+                               asp-route-fechaDesde="@ViewBag.fechaDesde" 
+                               asp-route-fechaHasta="@ViewBag.fechaHasta" 
+                               asp-route-pageNumber="@i">
+                                @i
+                            </a>
+                        </li>
+                    }
+                </ul>
+            </nav>
+            <p class="text-muted text-center mt-2 small">
+                Total de registros: @ViewBag.totalRegistros
+            </p>
+        }
+
+    </div>
+</div>

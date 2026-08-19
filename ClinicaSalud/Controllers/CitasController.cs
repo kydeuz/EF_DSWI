@@ -60,6 +60,8 @@ namespace ClinicaSalud.Controllers
         [HttpPost]
         public IActionResult Registrar(Cita objCita)
         {
+            objCita.Estado = "Pendiente";
+            ModelState.Remove(nameof(objCita.Estado)); 
             if (objCita.Fecha < DateTime.Today)
             {
              ModelState.AddModelError("Fecha", "No se pueden agendar citas en fechas pasadas.");

@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc.Authorization;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Configuración de Controllers con filtro global de autorización
+// Configuraciï¿½n de Controllers con filtro global de autorizaciï¿½n
 builder.Services.AddControllersWithViews(options =>
 {
     options.Filters.Add(new AuthorizeFilter());
@@ -14,8 +14,10 @@ builder.Services.AddControllersWithViews(options =>
 builder.Services.AddScoped<ICitaRepository, CitaRepository>();
 builder.Services.AddScoped<IPacienteRepository, PacienteRepository>();
 builder.Services.AddScoped<IMedicoRepository, MedicoRepository>();
+builder.Services.AddScoped<IReporteRepository, ReporteRepository>();
 
-// Configuración de autenticación con Cookies
+
+// Configuraciï¿½n de autenticaciï¿½n con Cookies
 builder.Services.AddAuthentication(CookieAuthenticationDefaults.AuthenticationScheme)
     .AddCookie(options =>
     {
