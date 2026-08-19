@@ -1,0 +1,66 @@
+﻿@model ClinicaSalud.Models.HistorialMedico
+@{
+    ViewData["Title"] = "Nuevo registro";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+    var paciente = (ClinicaSalud.Models.Paciente)ViewBag.Paciente;
+}
+
+<nav aria-label="breadcrumb" class="mb-2">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a asp-controller="HistorialMedico" asp-action="Listado" asp-route-pacienteId="@paciente.PacienteId">Historial Médico</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Nuevo registro</li>
+    </ol>
+</nav>
+
+<h2 class="fw-bold mb-1">Nuevo registro</h2>
+<p class="text-muted mb-4">Paciente: <strong>@paciente.Nombres @paciente.Apellidos</strong> — DNI: @paciente.DNI</p>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+
+        <form asp-controller="HistorialMedico" asp-action="Registrar" method="post">
+
+            <input type="hidden" asp-for="PacienteId" />
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="MedicoId" class="form-label">Médico *</label>
+                    <select asp-for="MedicoId" class="form-select" required
+                            asp-items="@(new SelectList(ViewBag.Medicos, "MedicoId", "Nombres"))">
+                        <option value="">Seleccione médico</option>
+                    </select>
+                    <span asp-validation-for="MedicoId" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+                <div class="col-12">
+                    <label asp-for="Diagnostico" class="form-label">Diagnóstico *</label>
+                    <textarea asp-for="Diagnostico" class="form-control" rows="2" placeholder="Ingrese el diagnóstico" required></textarea>
+                    <span asp-validation-for="Diagnostico" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+                <div class="col-12">
+                    <label asp-for="Tratamiento" class="form-label">Tratamiento</label>
+                    <textarea asp-for="Tratamiento" class="form-control" rows="2" placeholder="Ingrese el tratamiento indicado"></textarea>
+                    <span asp-validation-for="Tratamiento" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+                <a asp-controller="HistorialMedico" asp-action="Listado" asp-route-pacienteId="@paciente.PacienteId" class="btn btn-outline-secondary px-4">Cancelar</a>
+                <button type="submit" class="btn btn-primary px-4">Guardar</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

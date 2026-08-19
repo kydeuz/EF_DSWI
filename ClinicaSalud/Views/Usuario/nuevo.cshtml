@@ -1,0 +1,72 @@
+﻿@model ClinicaSalud.Models.Usuario
+
+@{
+    ViewData["Title"] = "Nuevo usuario";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<nav aria-label="breadcrumb" class="mb-2">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Usuario" asp-action="listadousuarios">Usuarios</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Nuevo usuario</li>
+    </ol>
+</nav>
+
+<h2 class="fw-bold mb-4">Nuevo usuario</h2>
+
+@if (TempData["mensaje"] != null)
+{
+    <div class="alert alert-info">@TempData["mensaje"]</div>
+}
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+
+        <form asp-controller="Usuario" asp-action="Registrar" method="post">
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="Nombre" class="form-label">Nombre *</label>
+                    <input asp-for="Nombre" class="form-control" placeholder="Ingrese nombre completo" required maxlength="100" />
+                    <span asp-validation-for="Nombre" class="text-danger small"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="Correo" class="form-label">Correo *</label>
+                    <input asp-for="Correo" type="email" class="form-control" placeholder="Ingrese correo electrónico" required maxlength="100" />
+                    <span asp-validation-for="Correo" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="row g-3 mt-1">
+                <div class="col-md-6">
+                    <label asp-for="RolId" class="form-label">Rol *</label>
+                    <select asp-for="RolId" class="form-select" required
+                            asp-items="@(new SelectList(ViewBag.Roles, "RolId", "Nombre"))">
+                        <option value="">Seleccione</option>
+                    </select>
+                    <span asp-validation-for="RolId" class="text-danger small"></span>
+                </div>
+
+                <div class="col-md-6">
+                    <label asp-for="Contrasena" class="form-label">Contraseña *</label>
+                    <input asp-for="Contrasena" type="password" class="form-control" placeholder="Ingrese contraseña" required maxlength="100" />
+                    <span asp-validation-for="Contrasena" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+                <a asp-controller="Usuario" asp-action="listadousuarios" class="btn btn-outline-secondary px-4">Cancelar</a>
+                <button type="submit" class="btn btn-primary px-4">Guardar</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

@@ -1,0 +1,54 @@
+﻿@model ClinicaSalud.Models.Especialidad
+
+@{
+    ViewData["Title"] = "Nueva especialidad";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<nav aria-label="breadcrumb" class="mb-2">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a asp-controller="Especialidades" asp-action="listadoespecialidades">Especialidades</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Nueva especialidad</li>
+    </ol>
+</nav>
+
+<h2 class="fw-bold mb-4">Nueva especialidad</h2>
+
+@if (TempData["mensaje"] != null)
+{
+    <div class="alert alert-info">@TempData["mensaje"]</div>
+}
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+
+        <form asp-controller="Especialidades" asp-action="Registrar" method="post">
+
+            <div class="row g-3">
+                <div class="col-md-6">
+                    <label asp-for="Nombre" class="form-label">Nombre *</label>
+                    <input asp-for="Nombre" class="form-control" placeholder="Ingrese el nombre de la especialidad" required maxlength="100" />
+                    <span asp-validation-for="Nombre" class="text-danger small"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Descripcion" class="form-label">Descripción</label>
+                    <input asp-for="Descripcion" class="form-control" placeholder="Ingrese una descripción" maxlength="255" />
+                    <span asp-validation-for="Descripcion" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end gap-2 mt-4">
+                <a asp-controller="Especialidades" asp-action="listadoespecialidades" class="btn btn-outline-secondary px-4">Cancelar</a>
+                <button type="submit" class="btn btn-primary px-4">Guardar</button>
+            </div>
+
+        </form>
+
+    </div>
+</div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+}

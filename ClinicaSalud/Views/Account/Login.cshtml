@@ -1,0 +1,48 @@
+﻿@model ClinicaSalud.Models.LoginViewModel
+@{
+    Layout = null;  
+}
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Iniciar Sesión - Clínica Salud</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+</head>
+<body class="bg-light d-flex align-items-center justify-content-center" style="height: 100vh;">
+
+    <div class="card shadow p-4" style="width: 100%; max-width: 400px;">
+        <h3 class="text-center mb-4">Clínica Salud</h3>
+        <h5 class="text-center text-muted mb-3">Iniciar Sesión</h5>
+
+        @if (ViewBag.Error != null)
+        {
+            <div class="alert alert-danger" role="alert">
+                @ViewBag.Error
+            </div>
+        }
+
+        <form asp-action="Login" method="post">
+            @Html.AntiForgeryToken()
+
+            <div class="mb-3">
+                <label class="form-label">Correo Electrónico</label>
+                <input asp-for="Correo" class="form-control" placeholder="correo@ejemplo.com" required />
+                <span asp-validation-for="Correo" class="text-danger"></span>
+            </div>
+
+            <div class="mb-3">
+                <label class="form-label">Contraseña</label>
+                <input asp-for="Contrasena" type="password" class="form-control" placeholder="••••••••" required />
+                <span asp-validation-for="Contrasena" class="text-danger"></span>
+            </div>
+
+         
+            <button type="submit" class="btn btn-primary w-100">Ingresar</button>
+        </form>
+    </div>
+
+</body>
+</html>

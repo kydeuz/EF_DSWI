@@ -1,0 +1,983 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\account\\login.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\usuario\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\usuario\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\usuario\\listadousuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\usuario\\listadousuarios.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\usuario\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\models\\loginviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\models\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\models\\rol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\models\\usuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\controllers\\usuariocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\controllers\\accountcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\shared\\_layoutmaster.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\shared\\_layoutmaster.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\database\\proyectoclinica_fixed.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\database\\proyectoclinica_fixed.sql||{CC5D8DF0-88F4-4BB2-9DBB-B48CEE65C30A}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\repository\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\repository\\medicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\repository\\pacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\repository\\pacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\repository\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\repository\\ipacienterepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\repository\\icitarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\repository\\icitarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\repository\\imedicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\repository\\imedicorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\repository\\citarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\repository\\citarepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\controllers\\medicoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\controllers\\medicoscontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\models\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\models\\medico.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\medicos\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\medicos\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\medicos\\listadomedicos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\medicos\\listadomedicos.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\controllers\\especialidadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\controllers\\especialidadescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\citas\\listadocitas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\citas\\listadocitas.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\pacientes\\listadopacientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\pacientes\\listadopacientes.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\historialmedico\\listado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\historialmedico\\listado.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\especialidades\\listadoespecialidades.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\especialidades\\listadoespecialidades.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\dashboard\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\models\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\models\\dashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\controllers\\dashboardcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\controllers\\historialmedicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\controllers\\historialmedicocontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\historialmedico\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\historialmedico\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\historialmedico\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\historialmedico\\detalle.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\models\\historialmedio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\models\\historialmedio.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\controllers\\citascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\controllers\\citascontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\citas\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\citas\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\citas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\citas\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\models\\cita.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\medicos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\medicos\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\especialidades\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\especialidades\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\especialidades\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\especialidades\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\pacientes\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\pacientes\\nuevo.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\pacientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\pacientes\\edit.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\controllers\\pacientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\controllers\\pacientescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\models\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\models\\especialidad.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\controllers\\homecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\home\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\shared\\_layout.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\home\\privacy.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\shared\\_validationscriptspartial.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\shared\\error.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\_viewimports.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|d:\\cibertec\\ciclo_5_m1\\servicios-web\\nueva carpeta\\ef_dswi-main\\clinicasalud\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{AD31522D-93D4-48D5-AD75-27F79F870ED6}|ClinicaSalud\\ClinicaSalud.csproj|solutionrelative:clinicasalud\\views\\_viewstart.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 16,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c64b9c2-e352-428e-a56d-0ace190b99a6}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{40ea2e6b-2121-4bb8-a43e-c83c04b51041}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{34e76e81-ee4a-11d0-ae2e-00a0c90fffc3}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{aa2115a1-9712-457b-9047-dbb71ca2cdd2}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{d78612c7-9962-4b83-95d9-268046dad23a}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{74946827-37a0-11d2-a273-00c04f8ef4ff}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{e8b06f52-6d01-11d2-aa7d-00c04f990343}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{c9c0ae26-aa77-11d2-b3f0-0000f87570ee}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:0:0:{0ad07096-bba9-4900-a651-0598d26f6d24}"
+            },
+            {
+              "$type": "Bookmark",
+              "Name": "ST:129:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Login.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Account\\Login.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Account\\Login.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Account\\Login.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Account\\Login.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-19T15:23:59.582Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "nuevo.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Usuario\\nuevo.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Usuario\\nuevo.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Usuario\\nuevo.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Usuario\\nuevo.cshtml",
+              "ViewState": "AgIAADwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-19T15:23:49.895Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "listadousuarios.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Usuario\\listadousuarios.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Usuario\\listadousuarios.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Usuario\\listadousuarios.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Usuario\\listadousuarios.cshtml",
+              "ViewState": "AgIAAFoAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-19T15:23:46.541Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Usuario\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Usuario\\Edit.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Usuario\\Edit.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Usuario\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-19T15:23:41.906Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "LoginViewModel.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\LoginViewModel.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Models\\LoginViewModel.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\LoginViewModel.cs",
+              "RelativeToolTip": "ClinicaSalud\\Models\\LoginViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-19T15:23:25.65Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Rol.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Rol.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Models\\Rol.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Rol.cs",
+              "RelativeToolTip": "ClinicaSalud\\Models\\Rol.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-19T15:23:16.879Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "Usuario.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Usuario.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Models\\Usuario.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Usuario.cs",
+              "RelativeToolTip": "ClinicaSalud\\Models\\Usuario.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-19T15:23:15.797Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UsuarioController.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\UsuarioController.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Controllers\\UsuarioController.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\UsuarioController.cs",
+              "RelativeToolTip": "ClinicaSalud\\Controllers\\UsuarioController.cs",
+              "ViewState": "AgIAAOcAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-19T15:23:04.752Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "AccountController.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\AccountController.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Controllers\\AccountController.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\AccountController.cs",
+              "RelativeToolTip": "ClinicaSalud\\Controllers\\AccountController.cs",
+              "ViewState": "AgIAAHsAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-19T15:23:00.382Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Program.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Program.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Program.cs",
+              "RelativeToolTip": "ClinicaSalud\\Program.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAADAAAAAKAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T20:56:29.602Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "proyectoclinica_fixed.sql",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Database\\proyectoclinica_fixed.sql",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Database\\proyectoclinica_fixed.sql",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Database\\proyectoclinica_fixed.sql",
+              "RelativeToolTip": "ClinicaSalud\\Database\\proyectoclinica_fixed.sql",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000826|",
+              "WhenOpened": "2026-08-18T19:25:31.711Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "MedicoRepository.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\MedicoRepository.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Repository\\MedicoRepository.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\MedicoRepository.cs",
+              "RelativeToolTip": "ClinicaSalud\\Repository\\MedicoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T18:14:33.094Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "PacienteRepository.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\PacienteRepository.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Repository\\PacienteRepository.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\PacienteRepository.cs",
+              "RelativeToolTip": "ClinicaSalud\\Repository\\PacienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T18:14:28.782Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "IMedicoRepository.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\IMedicoRepository.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Repository\\IMedicoRepository.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\IMedicoRepository.cs",
+              "RelativeToolTip": "ClinicaSalud\\Repository\\IMedicoRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T18:14:24.787Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "IPacienteRepository.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\IPacienteRepository.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Repository\\IPacienteRepository.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\IPacienteRepository.cs",
+              "RelativeToolTip": "ClinicaSalud\\Repository\\IPacienteRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T18:14:23.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "ICitaRepository.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\ICitaRepository.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Repository\\ICitaRepository.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\ICitaRepository.cs",
+              "RelativeToolTip": "ClinicaSalud\\Repository\\ICitaRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T18:14:20.107Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "CitaRepository.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\CitaRepository.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Repository\\CitaRepository.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Repository\\CitaRepository.cs",
+              "RelativeToolTip": "ClinicaSalud\\Repository\\CitaRepository.cs",
+              "ViewState": "AgIAABkAAAAAAAAAAAAcwCkAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:56:36.908Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 24,
+              "Title": "listadocitas.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Citas\\listadocitas.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Citas\\listadocitas.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Citas\\listadocitas.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Citas\\listadocitas.cshtml",
+              "ViewState": "AgIAAC0AAAAAAAAAAAAAAEQAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:48.956Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 35,
+              "Title": "HistorialMedio.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\HistorialMedio.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Models\\HistorialMedio.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\HistorialMedio.cs",
+              "RelativeToolTip": "ClinicaSalud\\Models\\HistorialMedio.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.13Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 26,
+              "Title": "listado.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\HistorialMedico\\listado.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\HistorialMedico\\listado.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\HistorialMedico\\listado.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\HistorialMedico\\listado.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.133Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
+              "Title": "MedicosController.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\MedicosController.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Controllers\\MedicosController.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\MedicosController.cs",
+              "RelativeToolTip": "ClinicaSalud\\Controllers\\MedicosController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAANgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.134Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 22,
+              "Title": "listadomedicos.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Medicos\\listadomedicos.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Medicos\\listadomedicos.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Medicos\\listadomedicos.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Medicos\\listadomedicos.cshtml",
+              "ViewState": "AgIAAAwAAAAAAAAAAAAAAD8AAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.136Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 21,
+              "Title": "nuevo.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Medicos\\nuevo.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Medicos\\nuevo.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Medicos\\nuevo.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Medicos\\nuevo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACwAAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "EspecialidadesController.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\EspecialidadesController.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Controllers\\EspecialidadesController.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\EspecialidadesController.cs",
+              "RelativeToolTip": "ClinicaSalud\\Controllers\\EspecialidadesController.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAgwGcAAAA9AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.139Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 20,
+              "Title": "Medico.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Medico.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Models\\Medico.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Medico.cs",
+              "RelativeToolTip": "ClinicaSalud\\Models\\Medico.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.14Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 34,
+              "Title": "detalle.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\HistorialMedico\\detalle.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\HistorialMedico\\detalle.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\HistorialMedico\\detalle.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\HistorialMedico\\detalle.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.142Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 33,
+              "Title": "nuevo.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\HistorialMedico\\nuevo.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\HistorialMedico\\nuevo.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\HistorialMedico\\nuevo.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\HistorialMedico\\nuevo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAUAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.143Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 32,
+              "Title": "HistorialMedicoController.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\HistorialMedicoController.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Controllers\\HistorialMedicoController.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\HistorialMedicoController.cs",
+              "RelativeToolTip": "ClinicaSalud\\Controllers\\HistorialMedicoController.cs",
+              "ViewState": "AgIAAHEAAAAAAAAAAAAswJIAAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.145Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 27,
+              "Title": "listadoespecialidades.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Especialidades\\listadoespecialidades.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Especialidades\\listadoespecialidades.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Especialidades\\listadoespecialidades.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Especialidades\\listadoespecialidades.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAA/AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.147Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 25,
+              "Title": "listadopacientes.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Pacientes\\listadopacientes.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Pacientes\\listadopacientes.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Pacientes\\listadopacientes.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Pacientes\\listadopacientes.cshtml",
+              "ViewState": "AgIAACoAAAAAAAAAAAAAAD0AAABPAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.149Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "_LayoutMaster.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Shared\\_LayoutMaster.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Shared\\_LayoutMaster.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Shared\\_LayoutMaster.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Shared\\_LayoutMaster.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHQAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.151Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 29,
+              "Title": "Dashboard.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Dashboard.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Models\\Dashboard.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Dashboard.cs",
+              "RelativeToolTip": "ClinicaSalud\\Models\\Dashboard.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.152Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 30,
+              "Title": "DashboardController.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\DashboardController.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Controllers\\DashboardController.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\DashboardController.cs",
+              "RelativeToolTip": "ClinicaSalud\\Controllers\\DashboardController.cs",
+              "ViewState": "AgIAAAMAAAAAAAAAAAAAABAAAAAgAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.154Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 28,
+              "Title": "index.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Dashboard\\index.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Dashboard\\index.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Dashboard\\index.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Dashboard\\index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.155Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 31,
+              "Title": "Paciente.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Paciente.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Models\\Paciente.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Paciente.cs",
+              "RelativeToolTip": "ClinicaSalud\\Models\\Paciente.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.157Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 37,
+              "Title": "nuevo.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Citas\\nuevo.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Citas\\nuevo.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Citas\\nuevo.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Citas\\nuevo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAACsAAAASAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.16Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 38,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Citas\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Citas\\Edit.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Citas\\Edit.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Citas\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.161Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 36,
+              "Title": "CitasController.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\CitasController.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Controllers\\CitasController.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\CitasController.cs",
+              "RelativeToolTip": "ClinicaSalud\\Controllers\\CitasController.cs",
+              "ViewState": "AgIAANEAAAAAAAAAAAAUwOgAAAAxAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.163Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 39,
+              "Title": "Cita.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Cita.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Models\\Cita.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Cita.cs",
+              "RelativeToolTip": "ClinicaSalud\\Models\\Cita.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.165Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 40,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Medicos\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Medicos\\Edit.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Medicos\\Edit.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Medicos\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAzAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.167Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 42,
+              "Title": "nuevo.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Especialidades\\nuevo.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Especialidades\\nuevo.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Especialidades\\nuevo.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Especialidades\\nuevo.cshtml",
+              "ViewState": "AgIAAB4AAAAAAAAAAAAAAAcAAAAqAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.168Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 41,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Especialidades\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Especialidades\\Edit.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Especialidades\\Edit.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Especialidades\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAABoAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.17Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 43,
+              "Title": "nuevo.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Pacientes\\nuevo.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Pacientes\\nuevo.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Pacientes\\nuevo.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Pacientes\\nuevo.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABoAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.172Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 48,
+              "Title": "Index.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Home\\Index.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Home\\Index.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Home\\Index.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Home\\Index.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAAkAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.174Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 50,
+              "Title": "Privacy.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Home\\Privacy.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Home\\Privacy.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Home\\Privacy.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Home\\Privacy.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.176Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 44,
+              "Title": "Edit.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Pacientes\\Edit.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Pacientes\\Edit.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Pacientes\\Edit.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Pacientes\\Edit.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 45,
+              "Title": "PacientesController.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\PacientesController.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Controllers\\PacientesController.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\PacientesController.cs",
+              "RelativeToolTip": "ClinicaSalud\\Controllers\\PacientesController.cs",
+              "ViewState": "AgIAAFkAAAAAAAAAAAAswFAAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.18Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 54,
+              "Title": "_ViewStart.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\_ViewStart.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\_ViewStart.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\_ViewStart.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\_ViewStart.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.182Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 46,
+              "Title": "Especialidad.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Especialidad.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Models\\Especialidad.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Models\\Especialidad.cs",
+              "RelativeToolTip": "ClinicaSalud\\Models\\Especialidad.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.183Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 53,
+              "Title": "_ViewImports.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\_ViewImports.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\_ViewImports.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\_ViewImports.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\_ViewImports.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.186Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 47,
+              "Title": "HomeController.cs",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\HomeController.cs",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Controllers\\HomeController.cs",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Controllers\\HomeController.cs",
+              "RelativeToolTip": "ClinicaSalud\\Controllers\\HomeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABUAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-08-18T17:54:49.188Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 18,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\appsettings.json",
+              "RelativeDocumentMoniker": "ClinicaSalud\\appsettings.json",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\appsettings.json",
+              "RelativeToolTip": "ClinicaSalud\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAIAAACaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2026-08-18T17:54:49.189Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 49,
+              "Title": "_Layout.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Shared\\_Layout.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Shared\\_Layout.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Shared\\_Layout.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Shared\\_Layout.cshtml",
+              "ViewState": "AgIAAAIAAAAAAAAAAAAiwDEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.192Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 52,
+              "Title": "Error.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Shared\\Error.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Shared\\Error.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Shared\\Error.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Shared\\Error.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.194Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 51,
+              "Title": "_ValidationScriptsPartial.cshtml",
+              "DocumentMoniker": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeDocumentMoniker": "ClinicaSalud\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ToolTip": "D:\\CIBERTEC\\Ciclo_5_M1\\Servicios-WEB\\Nueva carpeta\\EF_DSWI-main\\ClinicaSalud\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "RelativeToolTip": "ClinicaSalud\\Views\\Shared\\_ValidationScriptsPartial.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2026-08-18T17:54:49.195Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 43,
+          "SelectedChildIndex": -1,
+          "Children": [
+            {
+              "$type": "Bookmark",
+              "Name": "ST:1:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

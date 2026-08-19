@@ -1,0 +1,53 @@
+﻿@model ClinicaSalud.Models.HistorialMedico
+@{
+    ViewData["Title"] = "Detalle del registro";
+    Layout = "~/Views/Shared/_LayoutMaster.cshtml";
+}
+
+<nav aria-label="breadcrumb" class="mb-2">
+    <ol class="breadcrumb mb-0">
+        <li class="breadcrumb-item"><a asp-controller="HistorialMedico" asp-action="Listado" asp-route-pacienteId="@Model.PacienteId">Historial Médico</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Detalle</li>
+    </ol>
+</nav>
+
+<h2 class="fw-bold mb-4">Detalle del registro</h2>
+
+<div class="card border-0 shadow-sm">
+    <div class="card-body p-4">
+
+        <div class="row g-4">
+            <div class="col-md-6">
+                <span class="text-muted small d-block">Paciente</span>
+                <span class="fw-semibold">@Model.NombrePaciente</span>
+            </div>
+            <div class="col-md-6">
+                <span class="text-muted small d-block">Médico</span>
+                <span class="fw-semibold">@Model.NombreMedico</span>
+            </div>
+            <div class="col-md-6">
+                <span class="text-muted small d-block">Fecha</span>
+                <span class="fw-semibold">@Model.Fecha.ToString("dd/MM/yyyy")</span>
+            </div>
+        </div>
+
+        <hr class="my-4" />
+
+        <div class="mb-3">
+            <span class="text-muted small d-block">Diagnóstico</span>
+            <p class="mb-0">@Model.Diagnostico</p>
+        </div>
+
+        <div>
+            <span class="text-muted small d-block">Tratamiento</span>
+            <p class="mb-0">@(string.IsNullOrEmpty(Model.Tratamiento) ? "—" : Model.Tratamiento)</p>
+        </div>
+
+        <div class="d-flex justify-content-end mt-4">
+            <a asp-controller="HistorialMedico" asp-action="Listado" asp-route-pacienteId="@Model.PacienteId" class="btn btn-outline-secondary px-4">
+                Volver
+            </a>
+        </div>
+
+    </div>
+</div>
