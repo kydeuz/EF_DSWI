@@ -107,6 +107,12 @@ namespace ClinicaSalud.Controllers
         [HttpPost]
         public IActionResult Registrar(Medico objMedico)
         {
+
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Especialidades = listarEspecialidades(); 
+                return View(objMedico);
+            }
             string mensaje = "";
 
             using (SqlConnection cn = new SqlConnection(configuration["ConnectionStrings:cn"]))
@@ -141,6 +147,7 @@ namespace ClinicaSalud.Controllers
         [HttpGet]
         public IActionResult Edit(int id)
         {
+            
             Medico objMedico = new Medico();
 
             using (SqlConnection cn = new SqlConnection(configuration["ConnectionStrings:cn"]))
@@ -173,6 +180,11 @@ namespace ClinicaSalud.Controllers
         [HttpPost, ActionName("Edit")]
         public IActionResult Edit_Post(Medico objMedico)
         {
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Especialidades = listarEspecialidades();
+                return View(objMedico);
+            }
             string mensaje = "";
 
             using (SqlConnection cn = new SqlConnection(configuration["ConnectionStrings:cn"]))

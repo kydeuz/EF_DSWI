@@ -83,6 +83,15 @@ namespace ClinicaSalud.Controllers
         [HttpPost]
         public IActionResult Registrar(Paciente objPaciente)
         {
+            if (objPaciente.FechaNacimiento > DateTime.Today)
+            {
+                ModelState.AddModelError("FechaNacimiento", "La fecha de nacimiento no puede ser futura.");
+            }
+
+            if (!ModelState.IsValid)
+            {
+                return View( "nuevo" , objPaciente);
+            }
             string mensaje = "";
 
             using (SqlConnection cn = new SqlConnection(configuration["ConnectionStrings:cn"]))

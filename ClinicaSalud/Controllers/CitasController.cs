@@ -60,6 +60,17 @@ namespace ClinicaSalud.Controllers
         [HttpPost]
         public IActionResult Registrar(Cita objCita)
         {
+            if (objCita.Fecha < DateTime.Today)
+            {
+             ModelState.AddModelError("Fecha", "No se pueden agendar citas en fechas pasadas.");
+            }   
+
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Pacientes = _pacienteRepo.ListarPacientesCombo();
+                ViewBag.Medicos = _medicoRepo.ListarMedicosCombo();
+                return View("Nuevo", objCita);  
+            }
             
             string mensaje = _citaRepo.Registrar(objCita);
 
@@ -79,6 +90,18 @@ namespace ClinicaSalud.Controllers
         [HttpPost]
         public IActionResult Edit(Cita objCita)
         {
+            if (objCita.Fecha < DateTime.Today)
+            {
+                ModelState.AddModelError("Fecha", "No se pueden agendar citas en fechas pasadas.");
+            }
+
+            // Vista con los datos y los mensajes
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Pacientes = _pacienteRepo.ListarPacientesCombo();
+                ViewBag.Medicos = _medicoRepo.ListarMedicosCombo();
+                return View(objCita);
+            }
             string mensaje = _citaRepo.Actualizar(objCita);
             TempData["mensaje"] = mensaje;
             return RedirectToAction("listadocitas");

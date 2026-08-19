@@ -117,6 +117,13 @@ namespace ClinicaSalud.Controllers
         [HttpPost]
         public IActionResult Registrar(HistorialMedico objHistorial)
         {
+
+            if (!ModelState.IsValid)
+            {
+                ViewBag.Medicos = listarMedicosCombo();           
+                ViewBag.Paciente = buscarPaciente(objHistorial.PacienteId); 
+                return View("nuevo", objHistorial);             
+            }
             string mensaje = "";
 
             using (SqlConnection cn = new SqlConnection(configuration["ConnectionStrings:cn"]))

@@ -1,4 +1,4 @@
-﻿﻿@{
+﻿@{
     string controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
     string ActiveClass(string name) => controller.Equals(name, StringComparison.OrdinalIgnoreCase) ? "active" : "";
 
@@ -38,7 +38,7 @@
 
                     <li><a class="nav-link @ActiveClass("Reportes")" asp-controller="Reportes" asp-action="Index"><i class="bi bi-bar-chart"></i><span>Reportes</span></a></li>
                     <li><a class="nav-link @ActiveClass("Usuarios")" asp-controller="Usuario" asp-action="listadousuarios"><i class="bi bi-person-lines-fill"></i><span>Usuarios</span></a></li>
-                    <li><a class="nav-link @ActiveClass("Configuracion")" asp-controller="Configuracion" asp-action="Index"><i class="bi bi-gear"></i><span>Configuración</span></a></li>
+                    
                 </ul>
             </nav>
 
