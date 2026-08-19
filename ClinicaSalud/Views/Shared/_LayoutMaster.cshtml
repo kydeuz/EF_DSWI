@@ -1,4 +1,4 @@
-﻿@{
+﻿﻿@{
     string controller = ViewContext.RouteData.Values["controller"]?.ToString() ?? "";
     string ActiveClass(string name) => controller.Equals(name, StringComparison.OrdinalIgnoreCase) ? "active" : "";
 
@@ -98,6 +98,7 @@
                 </div>
             </header>
 
+            <!-- Contenido de cada vista -->
             <main class="content">
                 @RenderBody()
             </main>
