@@ -239,4 +239,34 @@ END
 ---
 
 
+### 📋 Aporte técnico 
+
+#### 1. Arquitectura y separación de capas
+
+- Diseño e implementación del **Repository Pattern** completo en el módulo de **Pacientes/Clientes**: interfaz (`IPacienteRepository`) + implementación (`PacienteRepository`), desacoplando el acceso a datos del controlador.
+- Aplicación del mismo patrón desde cero en el **módulo de Reportes** (interfaz, repositorio, modelo DTO).
+- Inyección de dependencias configurada para ambos módulos, integrándolos al esquema de DI ya existente en el proyecto.
+
+#### 2. Transacciones (C# + SQL)
+
+- Implementación de **`SqlTransaction`** en C# dentro del repositorio de Citas, en las operaciones de `Actualizar` y `Delete`, con manejo de `Commit`/`Rollback` ante excepciones.
+- Implementación de **transacción a nivel SQL** (`BEGIN TRANSACTION` / `ROLLBACK` / `RAISERROR`) en el stored procedure `sp_InsertarCita`, para garantizar atomicidad entre la validación de conflicto de horario y la inserción.
+
+#### 3. Paginación eficiente
+
+- Introducción del patrón **`OFFSET`/`FETCH NEXT`** a nivel de SQL Server (en lugar de paginar en memoria desde C#) en el módulo de **Pacientes/Clientes**.
+- Replicación del mismo patrón en los SPs nuevos del módulo de Reportes (`sp_ReporteCitas_PorFecha`, `sp_ContarReporteCitas_PorFecha`).
+
+#### 4. Validaciones de servidor y depuración
+
+- Corrección de un bug de validación en el módulo de Citas relacionado con el binding de propiedades no enviadas por el formulario (`NombrePaciente`, `NombreMedico`, `Estado`), usando nullable reference types y manejo explícito de `ModelState`.
+- Validación de fecha de nacimiento futura en Pacientes.
+- Validación de fecha de cita pasada en Citas.
+- Validación de coherencia de rango de fechas (Desde > Hasta) en Reportes, con mensajes vía `TempData`.
+
+#### 5. Módulo de Reportes (completo)
+
+- Modelo, interfaz, repositorio, controlador y vista implementados de punta a punta, incluyendo filtros por rango de fechas y paginación.
+
+---
 
