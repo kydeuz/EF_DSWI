@@ -243,7 +243,7 @@ END
 
 #### 1. Arquitectura y separación de capas
 
-- Diseño e implementación del **Repository Pattern** completo en el módulo de **Clientes** .
+- Diseño e implementación del **Repository Pattern** completo en el módulo de **Citas** .
 - Aplicación del mismo patrón desde cero en el **módulo de Reportes** (interfaz, repositorio, modelo DTO).
 - Inyección de dependencias configurada para ambos módulos, integrándolos al esquema de DI ya existente en el proyecto.
 
