@@ -172,3 +172,101 @@ END
     }
 </ul>
 ```
+
+# **Mejoras implementadas version 3**
+
+### ✅ **Módulo Reportes (nuevo)**
+
+- **SPs:** `sp_ReporteCitas_PorFecha` y `sp_ContarReporteCitas_PorFecha`
+    
+- **Modelo:** `ReporteCita.cs`
+    
+- **Interfaz:** `IReporteRepository`
+    
+- **Repositorio:** `ReporteRepository`
+    
+- **Controlador:** `ReportesController` con validación de fechas incoherentes
+    
+- **Vista:** `Views/Reportes/Index.cshtml` con filtros, tabla y paginación
+    
+
+---
+
+### 2. 🗄️ **BASE DE DATOS (Nuevos SPs)**
+
+|SP|Función|
+|---|---|
+|`sp_ReporteCitas_PorFecha`|Lista citas en un rango de fechas con paginación (`OFFSET FETCH`).|
+|`sp_ContarReporteCitas_PorFecha`|Cuenta el total de citas en el rango para la paginación.|
+
+**Mejora:** Ambos SPs usan `OFFSET FETCH` (paginación eficiente en el servidor).
+
+---
+
+### 3. 📁 **NUEVOS ARCHIVOS CREADOS**
+
+| Archivo                 | Ubicación         | Propósito                                          |
+| ----------------------- | ----------------- | -------------------------------------------------- |
+| `ReporteCita.cs`        | `Models/`         | Modelo DTO para mostrar datos en el reporte.       |
+| `IReporteRepository.cs` | `Repository/`     | Interfaz con los métodos del repositorio.          |
+| `ReporteRepository.cs`  | `Repository/`     | Implementación de acceso a datos.                  |
+| `ReportesController.cs` | `Controllers/`    | Controlador con validación de fechas incoherentes. |
+| `Index.cshtml`          | `Views/Reportes/` | Vista con filtros, tabla y paginación.             |
+
+---
+
+### 4. ✅ **VALIDACIONES IMPLEMENTADAS**
+
+| Módulo        | Validación                                              | Tipo     | ¿Dónde?                              |
+| ------------- | ------------------------------------------------------- | -------- | ------------------------------------ |
+| **Pacientes** | Fecha de nacimiento futura                              | Servidor | Controlador                          |
+| **Citas**     | Fecha de cita pasada                                    | Servidor | Controlador                          |
+| **Citas**     | Conflicto de horario (mismo médico, misma fecha y hora) | Servidor | SP `sp_InsertarCita` con `RAISERROR` |
+| **Reportes**  | Fecha Desde > Fecha Hasta                               | Servidor | Controlador (con `TempData`)         |
+
+**Mensajes al usuario:** Uso de `TempData["mensaje"]` para éxito y `TempData["error"]` para errores.
+
+---
+
+### 5. 🔧 **MEJORAS EN CONTROLADORES EXISTENTES**
+
+| Controlador           | Mejora                                                                          |
+| --------------------- | ------------------------------------------------------------------------------- |
+| `PacientesController` | Validación de fecha futura + `ModelState.IsValid` + `return View("Nuevo", obj)` |
+| `CitasController`     | Validación de fecha pasada + `ViewBag` recargado cuando hay error               |
+| `ReportesController`  | Validación de fechas incoherentes + mensaje en `TempData`                       |
+
+---
+
+
+### 📋 Aporte técnico 
+
+#### 1. Arquitectura y separación de capas
+
+- Diseño e implementación del **Repository Pattern** completo en el módulo de **Citas** .
+- Aplicación del mismo patrón desde cero en el **módulo de Reportes** (interfaz, repositorio, modelo DTO).
+- Inyección de dependencias configurada para ambos módulos, integrándolos al esquema de DI ya existente en el proyecto.
+
+#### 2. Transacciones (C# + SQL)
+
+- Implementación de **`SqlTransaction`** en C# dentro del repositorio de Citas, en las operaciones de `Actualizar` y `Delete`, con manejo de `Commit`/`Rollback` ante excepciones.
+- Implementación de **transacción a nivel SQL** (`BEGIN TRANSACTION` / `ROLLBACK` / `RAISERROR`) en el stored procedure `sp_InsertarCita`, para garantizar atomicidad entre la validación de conflicto de horario y la inserción.
+
+#### 3. Paginación eficiente
+
+- Introducción del patrón **`OFFSET`/`FETCH NEXT`** a nivel de SQL Server (en lugar de paginar en memoria desde C#) en el módulo de **Citas**.
+- Replicación del mismo patrón en los SPs nuevos del módulo de Reportes (`sp_ReporteCitas_PorFecha`, `sp_ContarReporteCitas_PorFecha`).
+
+#### 4. Validaciones de servidor y depuración
+
+- Corrección de un bug de validación en el módulo de Citas relacionado con el binding de propiedades no enviadas por el formulario (`NombrePaciente`, `NombreMedico`, `Estado`), usando nullable reference types y manejo explícito de `ModelState`.
+- Validación de fecha de nacimiento futura en Pacientes.
+- Validación de fecha de cita pasada en Citas.
+- Validación de coherencia de rango de fechas (Desde > Hasta) en Reportes, con mensajes vía `TempData`.
+
+#### 5. Módulo de Reportes (completo)
+
+- Modelo, interfaz, repositorio, controlador y vista implementados de punta a punta, incluyendo filtros por rango de fechas y paginación.
+
+---
+
