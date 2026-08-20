@@ -32,15 +32,13 @@ namespace ClinicaSalud.Controllers
         }
 
         [HttpGet]
-        public IActionResult ListadoCitas(string texto = "", int pageNumber = 0)
+        public IActionResult ListadoCitas(string texto = "", int pageNumber = 1) // 0 -> 1
         {
             int pageSize = 3;
-
             ViewBag.texto = texto;
             ViewBag.pageNumber = pageNumber;
 
             IEnumerable<Cita> citas = _citaRepo.ListarCitas(pageNumber, pageSize, texto);
-
             int total = _citaRepo.ContarCitas(texto);
             ViewBag.paginas = (int)Math.Ceiling((double)total / pageSize);
 

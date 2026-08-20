@@ -88,10 +88,10 @@
         {
             <nav aria-label="Paginación de citas">
                 <ul class="pagination justify-content-center mb-0">
-                    @for (int i = 0; i < (int)ViewBag.paginas; i++)
-                    {
+                   @for (int i = 1; i <= (int)ViewBag.paginas; i++) 
+{
                         <li class="page-item @(i == (int)ViewBag.pageNumber ? "active" : "")">
-                            <a class="page-link" asp-action="ListadoCitas" asp-route-pageNumber="@i" asp-route-texto="@ViewBag.texto">@(i + 1)</a>
+                            <a class="page-link" asp-action="ListadoCitas" asp-route-pageNumber="@i" asp-route-texto="@ViewBag.texto">@i</a>
                         </li>
                     }
                 </ul>
