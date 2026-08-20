@@ -243,7 +243,7 @@ END
 
 #### 1. Arquitectura y separación de capas
 
-- Diseño e implementación del **Repository Pattern** completo en el módulo de **Pacientes/Clientes**: interfaz (`IPacienteRepository`) + implementación (`PacienteRepository`), desacoplando el acceso a datos del controlador.
+- Diseño e implementación del **Repository Pattern** completo en el módulo de **Clientes** .
 - Aplicación del mismo patrón desde cero en el **módulo de Reportes** (interfaz, repositorio, modelo DTO).
 - Inyección de dependencias configurada para ambos módulos, integrándolos al esquema de DI ya existente en el proyecto.
 
@@ -254,7 +254,7 @@ END
 
 #### 3. Paginación eficiente
 
-- Introducción del patrón **`OFFSET`/`FETCH NEXT`** a nivel de SQL Server (en lugar de paginar en memoria desde C#) en el módulo de **Pacientes/Clientes**.
+- Introducción del patrón **`OFFSET`/`FETCH NEXT`** a nivel de SQL Server (en lugar de paginar en memoria desde C#) en el módulo de **Clientes**.
 - Replicación del mismo patrón en los SPs nuevos del módulo de Reportes (`sp_ReporteCitas_PorFecha`, `sp_ContarReporteCitas_PorFecha`).
 
 #### 4. Validaciones de servidor y depuración
