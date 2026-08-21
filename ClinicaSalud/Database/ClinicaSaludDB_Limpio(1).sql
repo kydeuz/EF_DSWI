@@ -1,6 +1,6 @@
 -- =========================================================
 -- BASE DE DATOS: Sistema Clinico (ClinicaSaludDB)
--- Version ultima
+
 -- =========================================================
 
 IF EXISTS (SELECT name FROM sys.databases WHERE name = N'ClinicaSaludDB')
@@ -98,6 +98,9 @@ CREATE TABLE Citas (
 );
 GO
 
+ALTER TABLE Citas
+ADD CONSTRAINT UQ_Citas_Medico_Fecha_Hora UNIQUE (MedicoId, Fecha, Hora);
+
 -- =========================================================
 -- TABLA: HistorialMedico
 -- =========================================================
@@ -116,8 +119,8 @@ GO
 -- =========================================================
 -- INDICES DE APOYO (para las busquedas)
 -- =========================================================
-CREATE INDEX IX_Pacientes_Nombres ON Pacientes(Nombres, Apellidos);
-CREATE INDEX IX_Pacientes_DNI ON Pacientes(DNI);
+
+
 CREATE INDEX IX_Citas_Fecha ON Citas(Fecha);
 CREATE INDEX IX_Historial_Paciente ON HistorialMedico(PacienteId);
 GO
@@ -164,7 +167,7 @@ SET IDENTITY_INSERT Citas OFF;
 GO
 
 -- =========================================================
--- STORED PROCEDURES: Pacientes
+-- STORED PROCEDURES section : Pacientes
 -- =========================================================
 
 CREATE OR ALTER PROCEDURE sp_InsertarPaciente
@@ -224,8 +227,13 @@ CREATE OR ALTER PROCEDURE sp_EliminarPaciente
     @PacienteId INT
 AS
 BEGIN
-    DELETE FROM Pacientes
-    WHERE PacienteId = @PacienteId;
+    IF EXISTS (SELECT 1 FROM Citas WHERE PacienteId = @PacienteId)
+       OR EXISTS (SELECT 1 FROM HistorialMedico WHERE PacienteId = @PacienteId)
+    BEGIN
+        RAISERROR('No se puede eliminar: el paciente tiene citas o historial registrado.', 16, 1);
+        RETURN;
+    END
+    DELETE FROM Pacientes WHERE PacienteId = @PacienteId;
 END;
 GO
 
@@ -239,7 +247,7 @@ END;
 GO
 
 -- =========================================================
--- STORED PROCEDURES: Especialidades
+-- STORED PROCEDURES section : Especialidades
 -- =========================================================
 
 CREATE OR ALTER PROCEDURE sp_ListarEspecialidades
@@ -280,12 +288,17 @@ BEGIN
 END;
 GO
 
+
 CREATE OR ALTER PROCEDURE sp_EliminarEspecialidad
     @EspecialidadId INT
 AS
 BEGIN
-    DELETE FROM Especialidades
-    WHERE EspecialidadId = @EspecialidadId;
+    IF EXISTS (SELECT 1 FROM Medicos WHERE EspecialidadId = @EspecialidadId)
+    BEGIN
+        RAISERROR('No se puede eliminar: hay médicos registrados con esta especialidad.', 16, 1);
+        RETURN;
+    END
+    DELETE FROM Especialidades WHERE EspecialidadId = @EspecialidadId;
 END;
 GO
 
@@ -299,7 +312,7 @@ END;
 GO
 
 -- =========================================================
--- STORED PROCEDURES: Medicos
+-- STORED PROCEDURES section : Medicos
 -- =========================================================
 
 CREATE OR ALTER PROCEDURE sp_ListarMedicos
@@ -381,10 +394,17 @@ CREATE OR ALTER PROCEDURE sp_EliminarMedico
     @MedicoId INT
 AS
 BEGIN
-    DELETE FROM Medicos
-    WHERE MedicoId = @MedicoId;
+    IF EXISTS (SELECT 1 FROM Citas WHERE MedicoId = @MedicoId)
+       OR EXISTS (SELECT 1 FROM HistorialMedico WHERE MedicoId = @MedicoId)
+    BEGIN
+        RAISERROR('No se puede eliminar: el médico tiene citas o historial registrado.', 16, 1);
+        RETURN;
+    END
+    DELETE FROM Medicos WHERE MedicoId = @MedicoId;
 END;
 GO
+
+
 
 CREATE OR ALTER PROCEDURE sp_BuscarMedico
     @MedicoId INT
@@ -406,7 +426,7 @@ END;
 GO
 
 -- =========================================================
--- STORED PROCEDURES: Citas
+-- STORED PROCEDURES section : Citas
 -- =========================================================
 
 CREATE OR ALTER PROCEDURE sp_ListarCitas
@@ -469,7 +489,7 @@ END;
 GO
 
 -- =============================================
--- SP PARA CONTAR CITAS (Para calcular total de paginas)
+-- SP section PARA CONTAR CITAS (Para calcular total de paginas)
 -- =============================================
 CREATE OR ALTER PROCEDURE sp_ContarCitas
     @Texto VARCHAR(100) = NULL
@@ -489,7 +509,7 @@ END;
 GO
 
 -- =============================================
--- SP PARA INSERTAR CITA CON VALIDACION Y TRANSACCION
+-- SP section PARA INSERTAR CITA CON VALIDACION Y TRANSACCION
 -- =============================================
 CREATE OR ALTER PROCEDURE sp_InsertarCita
     @PacienteId INT,
@@ -581,7 +601,7 @@ END;
 GO
 
 -- =========================================================
--- STORED PROCEDURES: HistorialMedico
+-- STORED PROCEDURES section : HistorialMedico
 -- =========================================================
 
 -- Trae todo el historial de UN paciente (para la ficha del paciente)
@@ -701,10 +721,17 @@ AS
 BEGIN
     SET NOCOUNT ON;
 
+    IF @Contrasena IS NULL OR LEN(@Contrasena) = 0
+    BEGIN
+        RAISERROR('La contrasena no puede estar vacia', 16, 1);
+        RETURN;
+    END
+
     INSERT INTO Usuarios (Nombre, Correo, Contrasena, RolId, Estado, FechaCreacion)
     VALUES (@Nombre, @Correo, @Contrasena, @RolId, 1, GETDATE());
 END;
 GO
+
 
 -- 4. Actualizar Usuario
 CREATE OR ALTER PROCEDURE sp_ActualizarUsuario
@@ -763,7 +790,7 @@ END;
 GO
 
 -- =========================================================
--- STORED PROCEDURES: Dashboard
+-- STORED PROCEDURES section : Dashboard
 -- =========================================================
 
 -- Devuelve una sola fila con los 4 totales de las tarjetas

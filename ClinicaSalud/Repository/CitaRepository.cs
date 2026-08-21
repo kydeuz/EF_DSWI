@@ -113,7 +113,11 @@ namespace ClinicaSalud.Repository
                 }
                 catch (Exception ex)
                 {
-                    mensaje = "Error en BD: " + ex.Message;
+                    if (ex.Message.Contains("UQ_Citas_Medico_Fecha_Hora"))
+                        mensaje = "El médico ya tiene una cita agendada en ese horario.";
+                    else
+                        mensaje = "Error en BD: " + ex.Message;
+
                     return mensaje;
                 }
                 finally
