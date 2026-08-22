@@ -404,3 +404,31 @@ La corrección mueve la validación desde una capa incorrecta (anotación de tip
 | 2 | Prevención de condición de carrera en agendamiento de citas | SQL (constraint) + C# (repositorio) | `UNIQUE constraint` + manejo de excepción específico |
 | 3 | Contraseña opcional en edición de usuario | Modelo (C#) + SQL (stored procedure) | Tipo nullable + regla de negocio contextual |
 
+
+## v6 — Fix: paginación en búsqueda de Citas
+
+### El bug
+Al buscar citas por texto (paciente, médico o motivo), la aplicación 
+tiraba `SqlException: Procedure or function sp_BuscarCitasPorTexto 
+has too many arguments specified`.
+
+### Causa
+`CitaRepository.ListarCitas` envía tres parámetros al stored procedure 
+cuando hay texto de búsqueda: `@Texto`, `@pageNumber` y `@pagesize`. 
+El SP `sp_BuscarCitasPorTexto` en la base de datos solo aceptaba 
+`@Texto` — se había quedado con la firma anterior a que se agregara 
+paginación al módulo de Citas.
+
+### Por qué importa
+El módulo de Citas es el único que pagina del lado de la base de datos 
+(`OFFSET/FETCH`), a diferencia de Pacientes, Médicos y Especialidades, 
+que paginan en memoria con LINQ. Ese desfase entre lo que el código 
+manda y lo que el SP esperaba rompía cualquier búsqueda con texto en 
+Citas — una función central del sistema, no un caso borde.
+
+### Fix
+Se agregaron `@pageNumber INT` y `@pageSize INT` a la firma de 
+`sp_BuscarCitasPorTexto`, con la misma lógica `OFFSET/FETCH` que ya 
+usa `sp_ListarCitas`, para que ambos procedures respondan igual a lo 
+que espera el Repository.
+
