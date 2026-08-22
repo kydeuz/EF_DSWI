@@ -167,7 +167,7 @@ SET IDENTITY_INSERT Citas OFF;
 GO
 
 -- =========================================================
--- STORED PROCEDURES section : Pacientes
+-- STORED PROCEDURES: Pacientes
 -- =========================================================
 
 CREATE OR ALTER PROCEDURE sp_InsertarPaciente
@@ -247,7 +247,7 @@ END;
 GO
 
 -- =========================================================
--- STORED PROCEDURES section : Especialidades
+-- STORED PROCEDURES: Especialidades
 -- =========================================================
 
 CREATE OR ALTER PROCEDURE sp_ListarEspecialidades
@@ -312,7 +312,7 @@ END;
 GO
 
 -- =========================================================
--- STORED PROCEDURES section : Medicos
+-- STORED PROCEDURES: Medicos
 -- =========================================================
 
 CREATE OR ALTER PROCEDURE sp_ListarMedicos
@@ -426,7 +426,7 @@ END;
 GO
 
 -- =========================================================
--- STORED PROCEDURES section : Citas
+-- STORED PROCEDURES: Citas
 -- =========================================================
 
 CREATE OR ALTER PROCEDURE sp_ListarCitas
@@ -463,7 +463,9 @@ END;
 GO
 
 CREATE OR ALTER PROCEDURE sp_BuscarCitasPorTexto
-    @Texto VARCHAR(100)
+    @Texto VARCHAR(100),
+    @pageNumber INT,
+    @pagesize INT
 AS
 BEGIN
     SELECT
@@ -484,12 +486,14 @@ BEGIN
        OR m.Nombres    LIKE '%' + @Texto + '%'
        OR m.Apellidos  LIKE '%' + @Texto + '%'
        OR c.Motivo     LIKE '%' + @Texto + '%'
-    ORDER BY c.Fecha DESC, c.Hora;
+    ORDER BY c.Fecha DESC, c.Hora
+    OFFSET (@pageNumber - 1) * @pagesize ROWS
+    FETCH NEXT @pagesize ROWS ONLY;
 END;
 GO
 
 -- =============================================
--- SP section PARA CONTAR CITAS (Para calcular total de paginas)
+-- SP PARA CONTAR CITAS (Para calcular total de paginas)
 -- =============================================
 CREATE OR ALTER PROCEDURE sp_ContarCitas
     @Texto VARCHAR(100) = NULL
@@ -509,7 +513,7 @@ END;
 GO
 
 -- =============================================
--- SP section PARA INSERTAR CITA CON VALIDACION Y TRANSACCION
+-- SP PARA INSERTAR CITA CON VALIDACION Y TRANSACCION
 -- =============================================
 CREATE OR ALTER PROCEDURE sp_InsertarCita
     @PacienteId INT,
@@ -601,7 +605,7 @@ END;
 GO
 
 -- =========================================================
--- STORED PROCEDURES section : HistorialMedico
+-- STORED PROCEDURES: HistorialMedico
 -- =========================================================
 
 -- Trae todo el historial de UN paciente (para la ficha del paciente)
@@ -790,7 +794,7 @@ END;
 GO
 
 -- =========================================================
--- STORED PROCEDURES section : Dashboard
+-- STORED PROCEDURES: Dashboard
 -- =========================================================
 
 -- Devuelve una sola fila con los 4 totales de las tarjetas

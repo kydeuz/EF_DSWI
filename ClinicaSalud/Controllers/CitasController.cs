@@ -20,11 +20,6 @@ namespace ClinicaSalud.Controllers
         }
 
 
-      
-
-        private readonly IConfiguration configuration;
-        
-       
         [HttpGet]
         public IActionResult Index()
         {
