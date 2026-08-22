@@ -15,11 +15,6 @@ namespace ClinicaSalud.Controllers
             this.configuration = configuration;
         }
 
-        public IActionResult Index()
-        {
-            return View();
-        }
-
         public IEnumerable<Paciente> listarPacientes(string texto = "")
         {
             List<Paciente> pacientes = new List<Paciente>();

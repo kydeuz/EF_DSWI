@@ -58,6 +58,28 @@ namespace ClinicaSalud.Controllers
             return medicos;
         }
 
+        private string ObtenerNombreEspecialidad(int especialidadId)
+        {
+            string nombre = "";
+
+            using (SqlConnection cn = new SqlConnection(configuration["ConnectionStrings:cn"]))
+            {
+                SqlCommand cmd = new SqlCommand("sp_BuscarEspecialidad", cn);
+                cmd.CommandType = CommandType.StoredProcedure;
+                cmd.Parameters.AddWithValue("@EspecialidadId", especialidadId);
+
+                cn.Open();
+                using (SqlDataReader dr = cmd.ExecuteReader())
+                {
+                    if (dr.Read())
+                    {
+                        nombre = dr["Nombre"].ToString();
+                    }
+                }
+            }
+            return nombre;
+        }
+
       
         public IEnumerable<Especialidad> listarEspecialidades()
         {
@@ -107,11 +129,14 @@ namespace ClinicaSalud.Controllers
         [HttpPost]
         public IActionResult Registrar(Medico objMedico)
         {
+            objMedico.NombreEspecialidad = ObtenerNombreEspecialidad(objMedico.EspecialidadId);
+            ModelState.Remove("NombreEspecialidad");
+
 
             if (!ModelState.IsValid)
             {
                 ViewBag.Especialidades = listarEspecialidades(); 
-                return View(objMedico);
+                return View("nuevo" , objMedico);
             }
             string mensaje = "";
 
@@ -180,6 +205,9 @@ namespace ClinicaSalud.Controllers
         [HttpPost, ActionName("Edit")]
         public IActionResult Edit_Post(Medico objMedico)
         {
+            objMedico.NombreEspecialidad = ObtenerNombreEspecialidad(objMedico.EspecialidadId);
+            ModelState.Remove("NombreEspecialidad");
+
             if (!ModelState.IsValid)
             {
                 ViewBag.Especialidades = listarEspecialidades();
